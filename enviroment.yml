@@ -1,0 +1,19 @@
+name: base
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - conda==4.9.2
+  - pip
+  - bzip2
+  - jupyter
+  - matplotlib
+  - scipy
+  - pydot
+  - seaborn
+  - jupyterlab
+  - wxpython
+  - numpy
+  - pyparsing
+  - autopep8
+prefix: /opt/homebrew/Caskroom/miniforge/base
