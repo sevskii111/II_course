@@ -1,0 +1,17 @@
+Denial_of_service* = y | n
+Self_reproduction* = y | n
+Data_corruption* = y | n
+Auto_infection* = y | n
+Targeted* = y | n
+Data_encryption* = y | n
+Data_sniffing* = y | n
+Rootkit* = y | n
+Virus_class* = DOS | Data_Stealing | Ransom
+IF Virus_class = DOS            & Denial_of_service = y & Self_reproduction = n & Data_corruption = n & Auto_infection = n & Targeted = n & Data_encryption = n & Data_sniffing = n & Rootkit = n THEN Virus = Morris_Worm 
+IF Virus_class = DOS            & Denial_of_service = n & Self_reproduction = y & Data_corruption = y & Auto_infection = n & Targeted = n & Data_encryption = n & Data_sniffing = n & Rootkit = n THEN Virus = ILOVEYOU 
+IF Virus_class = DOS            & Denial_of_service = y & Self_reproduction = y & Data_corruption = n & Auto_infection = y & Targeted = n & Data_encryption = n & Data_sniffing = n & Rootkit = n THEN Virus = SQL_Slammer 
+IF Virus_class = Data_Stealing  & Denial_of_service = y & Self_reproduction = y & Data_corruption = n & Auto_infection = n & Targeted = y & Data_encryption = n & Data_sniffing = n & Rootkit = n THEN Virus = Stuxnet 
+IF Virus_class = Data_Stealing  & Denial_of_service = n & Self_reproduction = y & Data_corruption = n & Auto_infection = n & Targeted = n & Data_encryption = y & Data_sniffing = n & Rootkit = n THEN Virus = CryptoLocker 
+IF Virus_class = Data_Stealing  & Denial_of_service = n & Self_reproduction = y & Data_corruption = n & Auto_infection = y & Targeted = n & Data_encryption = n & Data_sniffing = n & Rootkit = n THEN Virus = Conficker 
+IF Virus_class = Ransom         & Denial_of_service = n & Self_reproduction = n & Data_corruption = n & Auto_infection = n & Targeted = n & Data_encryption = n & Data_sniffing = y & Rootkit = n THEN Virus = Tinba 
+IF Virus_class = Ransom         & Denial_of_service = n & Self_reproduction = y & Data_corruption = y & Auto_infection = n & Targeted = n & Data_encryption = n & Data_sniffing = n & Rootkit = y THEN Virus = Nimda 
