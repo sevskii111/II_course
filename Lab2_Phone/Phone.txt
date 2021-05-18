@@ -1,0 +1,29 @@
+Price_above_12000* = y | n
+Price_below_14000* = y | n
+Price_below_15000* = y | n
+Price_above_15000* = y | n
+Price_above_17000* = y | n
+Price_above_18000* = y | n
+Screen_size_7-9.7* = y | n
+Screen_size_8-9.7* = y | n
+Screen_size_9.1_and_up* = y | n
+Screen_size_10.1_and_up* = y | n
+Built-in_memory_size_is_less_than_64_GB* = y | n
+Memory_card_slot* = y | n
+SIM_card_2* = y | n
+4G_LTE* = y | n
+Bluetooth* = y | n
+Front-camera* = y | n
+Flash* = y | n
+High_impact_case* = y | n
+OS_Phone* = Android | IOS | Windows
+IF OS_Phone = Android & Price_above_15000 = y & Screen_size_7-9.7 = y & Built-in_memory_size_is_less_than_64_GB = y & Memory_card_slot = y & 4G_LTE = y & Front-camera = y & Flash = y THEN Phone = Xiaomi_MiPad_4 
+IF OS_Phone = Android & Price_above_17000 = y & Screen_size_10.1_and_up = y & Built-in_memory_size_is_less_than_64_GB = y & Memory_card_slot = y & 4G_LTE = y & Front-camera = y & Flash = y THEN Phone = Samsung_Galaxy_M11
+IF OS_Phone = Android & Price_below_15000 = y & Screen_size_7-9.7 = y & Built-in_memory_size_is_less_than_64_GB = y & SIM_card_2 = y & Front-camera = y THEN Phone = Digma_Plane
+IF OS_Phone = Android & Price_below_15000 = y & Screen_size_7-9.7 = y & Built-in_memory_size_is_less_than_64_GB = y & 4G_LTE = y & Memory_card_slot = y THEN Phone = Digma_Plane
+IF OS_Phone = IOS & Price_above_15000 = y & Screen_size_10.1_and_up = y & 4G_LTE = y & Flash = y THEN Phone = Apple_IPad_2018
+IF OS_Phone = IOS & Price_above_15000 = y & Screen_size_10.1_and_up = y & High_impact_case = y & Flash = y THEN Phone = Apple_IPad_Pro_11
+IF OS_Phone = IOS & Price_above_15000 = y & Screen_size_8-9.7 = y & Front-camera = y & High_impact_case  = y THEN Phone = Apple_IPad
+IF OS_Phone = Windows & Price_below_14000 = y & Screen_size_9.1_and_up = y & Memory_card_slot = y & SIM_card_2 = y THEN Phone = Lenovo_Miix
+IF OS_Phone = Windows & Price_above_12000 = y & Screen_size_9.1_and_up = y & Bluetooth = y & 4G_LTE = y THEN Phone = Microsoft_Go
+IF OS_Phone = Windows & Price_above_10000 = y & Screen_size_8-9.7 = y & Built-in_memory_size_is_less_than_64_GB = y & Bluetooth = y & 4G_LTE = y THEN Phone = Nokia_Lumia
