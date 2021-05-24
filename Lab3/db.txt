@@ -1,0 +1,6 @@
+L,Shlayer,2019,OSX,Trojan,1,1
+L,Nimda,2001,Windows,Trojan,,1
+L,ILOVEYOU,2001,OSX,Worm,1,1
+R,SQL Slammer,2003,Linux,Exploit,Network
+R,CryptoLocker,2018,Windows,Ransomware,Network
+R,Coinhive,2020,Windows,Cryptojacker,Web
